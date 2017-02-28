@@ -3,6 +3,9 @@
 LINE の Web loginのサンプル
 https://developers.line.me/web-api/integrating-web-login-v2
 
+下記ファイルがこのレポジトリの全て
+https://github.com/seteen/line-login-sample/blob/master/app/controllers/line_controller.rb
+
 # インストール
 ```
 git clone git@github.com:seteen/line-login-sample.git
