@@ -1,24 +1,30 @@
-# README
+# LINE Login Sample
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+LINE の Web loginのサンプル
+https://developers.line.me/web-api/integrating-web-login-v2
 
-Things you may want to cover:
+# インストール
+```
+git clone git@github.com:seteen/line-login-sample.git
+cd line-login-sample
+bundle install --path vendor/bundle
+```
+環境変数の設定
+```
+# in line-login-sample
+cp .env.sample .env
+```
+.envにLINE LoginのChannel ID, Channel Secretを登録
 
-* Ruby version
+# 使い方
+```
+# in line-login-sample
+bundle exec rails s
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. 上記を実行
+1. `http://localhost:3000/line/login` にアクセス
+1. `login` リンクを押下
+1. LINEでログイン
+1. `app/controllers/line_controller.rb` の `binding.pry` で動作が止まる
+1. `app/controllers/line_controller.rb` 内で定義しているメソッドなどを試してみる
